@@ -5,6 +5,8 @@ import ReactPage from './pages/ReactPage';
 import CSSPage from './pages/CSSPage';
 import BootstrapPage from './pages/Bootstrap';
 import TailwindPage from './pages/TailwindSS';
+import InterviewPrepPage from './pages/InterviewPrepPage';
+import InterviewTopicPage from './pages/InterviewTopicPage';
 import JSRoadmap from './javascript/00-js-roadmap/JSRoadmap';
 import ArrowFunctionsPage from './javascript/02-es6-features/ArrowFunctionsPage';
 import DestructuringPage from './javascript/02-es6-features/DestructuringPage';
@@ -110,6 +112,14 @@ function App() {
                   <i className="fa-brands fa-github"></i>
                   <span>GitHub</span>
                 </a>
+
+                <Link
+                  to="/interview"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all duration-200 font-semibold"
+                >
+                  <i className="fa-solid fa-user-graduate"></i>
+                  <span>Interview Prep</span>
+                </Link>
               </div>
 
               {/* Mobile Menu Button */}
@@ -149,6 +159,13 @@ function App() {
                 >
                   <i className="fa-brands fa-github mr-3"></i>GitHub
                 </a>
+                <Link
+                  to="/interview"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all"
+                >
+                  <i className="fa-solid fa-user-graduate mr-3"></i>Interview Prep
+                </Link>
               </div>
             </div>
           )}
@@ -161,6 +178,12 @@ function App() {
           <Route path="/css" element={<CSSPage />} />
           <Route path="/bootstrap" element={<BootstrapPage />} />
           <Route path="/tailwind" element={<TailwindPage />} />
+          <Route path="/interview" element={<InterviewPrepPage />} />
+          <Route path="/interview/react" element={<InterviewTopicPage title="React" icon="fa-brands fa-react" iconColor="text-blue-400" description="Hooks, Virtual DOM, Components" filePath="/docs/interview/react-questions.md" gradient="bg-gradient-to-br from-blue-900 to-slate-900" />} />
+          <Route path="/interview/javascript" element={<InterviewTopicPage title="JavaScript" icon="fa-brands fa-js" iconColor="text-yellow-400" description="ES6+, Closures, Async/Await" filePath="/docs/interview/javascript-questions.md" gradient="bg-gradient-to-br from-yellow-900 to-orange-900" />} />
+          <Route path="/interview/css" element={<InterviewTopicPage title="CSS" icon="fa-brands fa-css3-alt" iconColor="text-blue-500" description="Flexbox, Grid, Box Model" filePath="/docs/interview/css-questions.md" gradient="bg-gradient-to-br from-blue-900 to-indigo-900" />} />
+          <Route path="/interview/html" element={<InterviewTopicPage title="HTML" icon="fa-brands fa-html5" iconColor="text-orange-500" description="Semantics, Accessibility, SEO" filePath="/docs/interview/html-questions.md" gradient="bg-gradient-to-br from-orange-900 to-red-900" />} />
+          <Route path="/interview/challenges" element={<InterviewTopicPage title="100 Coding Challenges" icon="fa-solid fa-code" iconColor="text-green-400" description="Master JavaScript with 100 practical coding problems from Easy to Hard." filePath="/docs/interview/js-100-challenges.md" gradient="bg-gradient-to-br from-green-900 to-emerald-900" />} />
           <Route path="/js-roadmap" element={<JSRoadmap />} />
 
           {/* JavaScript Topics */}
