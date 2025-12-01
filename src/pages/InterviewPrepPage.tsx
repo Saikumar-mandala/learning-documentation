@@ -46,6 +46,15 @@ const InterviewPrepPage = () => {
             bg: 'bg-green-900',
             desc: 'Easy to Hard Coding Problems',
             link: '/interview/challenges'
+        },
+        {
+            id: 'nodejs',
+            title: 'Node.js',
+            icon: 'fa-brands fa-node',
+            color: 'text-green-500',
+            bg: 'bg-emerald-900',
+            desc: 'Event Loop, Express, Streams',
+            link: '/interview/nodejs'
         }
     ];
 

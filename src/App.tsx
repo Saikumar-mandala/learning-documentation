@@ -7,6 +7,7 @@ import BootstrapPage from './pages/Bootstrap';
 import TailwindPage from './pages/TailwindSS';
 import InterviewPrepPage from './pages/InterviewPrepPage';
 import InterviewTopicPage from './pages/InterviewTopicPage';
+import NodeJSPage from './pages/NodeJSPage';
 import JSRoadmap from './javascript/00-js-roadmap/JSRoadmap';
 import ArrowFunctionsPage from './javascript/02-es6-features/ArrowFunctionsPage';
 import DestructuringPage from './javascript/02-es6-features/DestructuringPage';
@@ -114,6 +115,14 @@ function App() {
                 </a>
 
                 <Link
+                  to="/nodejs"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all duration-200 font-semibold"
+                >
+                  <i className="fa-brands fa-node text-green-400"></i>
+                  <span>Node.js</span>
+                </Link>
+
+                <Link
                   to="/interview"
                   className="flex items-center gap-2 px-4 py-2 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all duration-200 font-semibold"
                 >
@@ -160,6 +169,13 @@ function App() {
                   <i className="fa-brands fa-github mr-3"></i>GitHub
                 </a>
                 <Link
+                  to="/nodejs"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all"
+                >
+                  <i className="fa-brands fa-node mr-3 text-green-400"></i>Node.js
+                </Link>
+                <Link
                   to="/interview"
                   onClick={() => setMobileMenuOpen(false)}
                   className="block px-4 py-3 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all"
@@ -184,6 +200,8 @@ function App() {
           <Route path="/interview/css" element={<InterviewTopicPage title="CSS" icon="fa-brands fa-css3-alt" iconColor="text-blue-500" description="Flexbox, Grid, Box Model" filePath="/docs/interview/css-questions.md" gradient="bg-gradient-to-br from-blue-900 to-indigo-900" />} />
           <Route path="/interview/html" element={<InterviewTopicPage title="HTML" icon="fa-brands fa-html5" iconColor="text-orange-500" description="Semantics, Accessibility, SEO" filePath="/docs/interview/html-questions.md" gradient="bg-gradient-to-br from-orange-900 to-red-900" />} />
           <Route path="/interview/challenges" element={<InterviewTopicPage title="100 Coding Challenges" icon="fa-solid fa-code" iconColor="text-green-400" description="Master JavaScript with 100 practical coding problems from Easy to Hard." filePath="/docs/interview/js-100-challenges.md" gradient="bg-gradient-to-br from-green-900 to-emerald-900" />} />
+          <Route path="/interview/nodejs" element={<InterviewTopicPage title="Node.js" icon="fa-brands fa-node" iconColor="text-green-500" description="Event Loop, Express, Streams, Modules" filePath="/docs/interview/nodejs-questions.md" gradient="bg-gradient-to-br from-emerald-900 to-green-900" />} />
+          <Route path="/nodejs" element={<NodeJSPage />} />
           <Route path="/js-roadmap" element={<JSRoadmap />} />
 
           {/* JavaScript Topics */}
