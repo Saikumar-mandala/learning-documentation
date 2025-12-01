@@ -54,7 +54,7 @@ export default function MarkdownViewer({ filePath, title }: MarkdownViewerProps)
     }
 
     return (
-        <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+        <div className="bg-white rounded-xl shadow-lg p-2 md:p-8 max-w-4xl mx-auto">
             {title && (
                 <div className="mb-6 pb-4 border-b-2 border-gray-200">
                     <h1 className="text-3xl font-bold text-gray-800 flex items-center gap-3">
