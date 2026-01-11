@@ -1,0 +1,148 @@
+JAVASCRIPT ARRAY.MAP() – INTERVIEW QUESTIONS
+===========================================
+
+SECTION 1: BASIC CONCEPT QUESTIONS
+----------------------------------
+1. What is Array.map() in JavaScript?
+2. Why do we use map()?
+3. What does map() return?
+4. Does map() modify the original array?
+5. What is the syntax of map()?
+6. Is map() mutable or immutable?
+7. Can map() return a different data type?
+8. What happens if you don’t return anything inside map()?
+9. Is map() available on objects?
+10. Is map() synchronous or asynchronous?
+
+SECTION 2: CALLBACK & PARAMETERS
+--------------------------------
+11. What parameters does the map() callback receive?
+12. What is currentValue in map()?
+13. What is index in map()?
+14. What is array parameter in map()?
+15. Is it mandatory to use all callback parameters?
+16. What is thisArg in map()?
+17. Can we use arrow functions with map()?
+18. Difference between arrow function and normal function in map()
+19. Can map() accept named functions?
+20. How does map() handle scope?
+
+SECTION 3: CODING QUESTIONS (VERY COMMON)
+-----------------------------------------
+21. Square each number in an array using map()
+22. Convert array of strings to uppercase
+23. Add 10 to every element in an array
+24. Multiply each element by its index
+25. Extract names from array of objects
+26. Convert array of numbers to strings
+27. Convert prices from USD to INR
+28. Append text to each string in array
+29. Convert boolean array to string array
+30. Create array of lengths of strings
+
+SECTION 4: OBJECT & REAL-WORLD SCENARIOS
+----------------------------------------
+31. Extract specific property from array of objects
+32. Add new property to each object using map()
+33. Modify existing object values using map()
+34. Rename object keys using map()
+35. Convert API response to UI-friendly format
+36. Create dropdown options using map()
+37. Map over nested objects
+38. Format date fields using map()
+39. Add computed fields using map()
+40. Convert backend data to frontend model
+
+SECTION 5: MAP VS OTHER METHODS (HIGH VALUE)
+--------------------------------------------
+41. Difference between map() and forEach()
+42. Difference between map() and filter()
+43. Difference between map() and reduce()
+44. map() vs for loop
+45. When should we not use map()?
+46. Can map() replace forEach()?
+47. Can map() be chained with filter()?
+48. Can map() be chained with reduce()?
+49. map() vs while loop
+50. map() vs for...of
+
+SECTION 6: ADVANCED & TRICKY QUESTIONS
+--------------------------------------
+51. What happens if map() returns undefined?
+52. How does map() handle empty slots?
+53. Does map() skip empty values?
+54. What happens if array length changes during map()?
+55. Can map() be stopped or broken?
+56. How does map() behave with NaN?
+57. Is map() shallow copy or deep copy?
+58. Performance comparison: map() vs for loop
+59. Can we use async/await with map()?
+60. Why map(async fn) returns promises?
+
+SECTION 7: EDGE CASE & OUTPUT QUESTIONS
+---------------------------------------
+61. Output of map() without return
+62. Output of map() on empty array
+63. Output of map() on null or undefined
+64. Output when map() callback throws error
+65. Output of nested map()
+66. Conditional return inside map()
+67. map() with sparse arrays
+68. map() with mixed data types
+69. map() with Math functions
+70. map() with parseInt issue
+
+SECTION 8: POLYFILL & INTERNAL WORKING
+-------------------------------------
+71. Write a polyfill for Array.map()
+72. How does map() work internally?
+73. Time complexity of map()
+74. Space complexity of map()
+75. Why map() is functional programming method?
+76. Is map() pure function?
+77. Does map() mutate object references?
+78. map() memory behavior
+79. map() execution order
+80. map() callback binding
+
+SECTION 9: REACT / FRONTEND INTERVIEW QUESTIONS
+-----------------------------------------------
+81. Why map() is used in React?
+82. How to render list using map() in React?
+83. Why key prop is required with map()?
+84. What happens if key is missing?
+85. map() inside JSX
+86. Conditional rendering with map()
+87. map() vs loop in React
+88. map() performance in React
+89. Handling empty lists in map()
+90. map() returning null in JSX
+
+SECTION 10: COMMON MISTAKES (INTERVIEW FAVORITE)
+-----------------------------------------------
+91. Using map() instead of forEach()
+92. Forgetting return inside map()
+93. Mutating objects inside map()
+94. Using map() for side effects
+95. Using map() when no transformation is needed
+96. Assuming map() is async
+97. Using map() on non-array
+98. map() inside map() misuse
+99. Overusing map()
+100. Wrong chaining with map()
+
+SECTION 11: RAPID-FIRE ONE LINERS
+--------------------------------
+101. Does map() modify original array?
+102. Does map() change array length?
+103. Can map() return object?
+104. Can map() return array?
+105. Can map() return promise?
+106. Does map() skip empty elements?
+107. Is map() chainable?
+108. Can map() throw error?
+109. Can map() be used on NodeList?
+110. Is map() lazy or eager?
+
+END OF FILE
+===========

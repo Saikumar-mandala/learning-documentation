@@ -1,0 +1,148 @@
+JAVASCRIPT ARRAY.REDUCE() – INTERVIEW QUESTIONS
+==============================================
+
+SECTION 1: BASIC CONCEPT QUESTIONS
+----------------------------------
+1. What is Array.reduce() in JavaScript?
+2. Why do we use reduce()?
+3. What does reduce() return?
+4. Does reduce() modify the original array?
+5. What is the syntax of reduce()?
+6. Is reduce() mutable or immutable?
+7. What is an accumulator in reduce()?
+8. What is initialValue in reduce()?
+9. What happens if initialValue is not provided?
+10. Is reduce() synchronous or asynchronous?
+
+SECTION 2: CALLBACK & PARAMETERS
+--------------------------------
+11. What parameters does reduce() callback receive?
+12. What is accumulator in reduce()?
+13. What is currentValue in reduce()?
+14. What is index in reduce()?
+15. What is array parameter in reduce()?
+16. Is it mandatory to use all parameters?
+17. What is the role of initialValue?
+18. How accumulator value changes in each iteration?
+19. Can reduce() return different data types?
+20. How does reduce() handle scope?
+
+SECTION 3: CODING QUESTIONS (VERY COMMON)
+-----------------------------------------
+21. Find sum of numbers using reduce()
+22. Find product of numbers using reduce()
+23. Find maximum number in array
+24. Find minimum number in array
+25. Count total elements in array
+26. Flatten a nested array
+27. Remove duplicates from array
+28. Count occurrences of elements
+29. Group objects by property
+30. Convert array to object
+
+SECTION 4: OBJECT & REAL-WORLD SCENARIOS
+----------------------------------------
+31. Calculate total price from cart items
+32. Group users by age
+33. Count votes or ratings
+34. Convert API response to map/object
+35. Aggregate sales data
+36. Calculate average using reduce()
+37. Build lookup table
+38. Merge multiple arrays into one
+39. Transform array into tree structure
+40. Calculate statistics from data
+
+SECTION 5: REDUCE VS OTHER METHODS (HIGH VALUE)
+-----------------------------------------------
+41. Difference between reduce() and map()
+42. Difference between reduce() and filter()
+43. Difference between reduce() and forEach()
+44. reduce() vs for loop
+45. When should we not use reduce()?
+46. Can reduce() replace map()?
+47. Can reduce() replace filter()?
+48. Can reduce() replace both map() and filter()?
+49. reduce() vs flatMap()
+50. reduce() vs recursion
+
+SECTION 6: ADVANCED & TRICKY QUESTIONS
+--------------------------------------
+51. What happens if reduce() callback returns undefined?
+52. How does reduce() handle empty arrays?
+53. What happens if reduce() has no initialValue?
+54. Can reduce() be stopped early?
+55. How does reduce() behave with NaN?
+56. Is reduce() shallow copy or deep copy?
+57. Performance comparison: reduce() vs for loop
+58. Can reduce() be used with async/await?
+59. Why reduce(async fn) returns promise?
+60. How to handle async reduce correctly?
+
+SECTION 7: EDGE CASE & OUTPUT QUESTIONS
+---------------------------------------
+61. Output of reduce() without initialValue
+62. Output of reduce() on empty array
+63. Output when reduce() callback throws error
+64. reduce() with single element array
+65. reduce() with mixed data types
+66. reduce() with string concatenation
+67. reduce() with boolean values
+68. reduce() with object accumulator
+69. reduce() with nested arrays
+70. reduce() with sparse arrays
+
+SECTION 8: POLYFILL & INTERNAL WORKING
+-------------------------------------
+71. Write a polyfill for Array.reduce()
+72. How does reduce() work internally?
+73. Time complexity of reduce()
+74. Space complexity of reduce()
+75. Why reduce() is functional programming method?
+76. Is reduce() pure function?
+77. Does reduce() mutate object references?
+78. reduce() memory behavior
+79. reduce() execution order
+80. reduce() callback binding
+
+SECTION 9: REACT / FRONTEND INTERVIEW QUESTIONS
+-----------------------------------------------
+81. Why reduce() is used in React?
+82. State aggregation using reduce()
+83. Calculating totals in React components
+84. reduce() in Redux reducers
+85. Difference between Array.reduce() and Redux reducer
+86. normalize data using reduce()
+87. reduce() vs map() in React
+88. reduce() performance in React
+89. reduce() inside useMemo
+90. reduce() with immutability
+
+SECTION 10: COMMON MISTAKES (INTERVIEW FAVORITE)
+-----------------------------------------------
+91. Forgetting initialValue
+92. Mutating accumulator incorrectly
+93. Returning wrong accumulator type
+94. Overusing reduce()
+95. Using reduce() when map/filter is simpler
+96. Incorrect async reduce usage
+97. Using reduce() for side effects
+98. reduce() callback not returning accumulator
+99. Confusing accumulator and currentValue
+100. reduce() on empty array without initialValue
+
+SECTION 11: RAPID-FIRE ONE LINERS
+--------------------------------
+101. Does reduce() modify original array?
+102. Can reduce() return object?
+103. Can reduce() return array?
+104. Can reduce() return number?
+105. Can reduce() return string?
+106. Can reduce() return promise?
+107. Is reduce() chainable?
+108. Can reduce() throw error?
+109. Can reduce() be used on NodeList?
+110. Is reduce() lazy or eager?
+
+END OF FILE
+===========

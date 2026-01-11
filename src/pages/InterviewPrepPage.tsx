@@ -59,12 +59,12 @@ const InterviewPrepPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 p-4 md:p-8">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 py-12">
+            <div className="container-fluid">
+                <div className="text-center mb-12 px-4">
+                    <h1 className="text-3xl sm:text-4xl md:text-7xl font-black text-white mb-6 leading-none tracking-tighter sm:tracking-normal">
                         <i className="fa-solid fa-user-graduate mr-4 text-purple-400"></i>
-                        Interview Preparation
+                        Interview <br className="sm:hidden" /> Prep
                     </h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                         Master your frontend interview with these A to Z questions and answers, explained in simple English.

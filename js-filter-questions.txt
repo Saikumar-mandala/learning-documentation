@@ -1,0 +1,148 @@
+JAVASCRIPT ARRAY.FILTER() – INTERVIEW QUESTIONS
+==============================================
+
+SECTION 1: BASIC CONCEPT QUESTIONS
+----------------------------------
+1. What is Array.filter() in JavaScript?
+2. Why do we use filter()?
+3. What does filter() return?
+4. Does filter() modify the original array?
+5. What is the syntax of filter()?
+6. Is filter() mutable or immutable?
+7. What type of value should filter() callback return?
+8. What happens if filter() callback returns false?
+9. Is filter() available on objects?
+10. Is filter() synchronous or asynchronous?
+
+SECTION 2: CALLBACK & PARAMETERS
+--------------------------------
+11. What parameters does filter() callback receive?
+12. What is currentValue in filter()?
+13. What is index in filter()?
+14. What is array parameter in filter()?
+15. Is it mandatory to use all callback parameters?
+16. What is thisArg in filter()?
+17. Can we use arrow functions with filter()?
+18. Difference between arrow and normal function in filter()
+19. Can filter() accept named functions?
+20. How does filter() handle scope?
+
+SECTION 3: CODING QUESTIONS (VERY COMMON)
+-----------------------------------------
+21. Filter even numbers from an array
+22. Filter odd numbers from an array
+23. Filter numbers greater than 10
+24. Filter strings with length > 5
+25. Filter positive numbers
+26. Remove falsy values using filter()
+27. Filter duplicate values
+28. Filter users above age 18
+29. Filter valid email addresses
+30. Filter active users from array
+
+SECTION 4: OBJECT & REAL-WORLD SCENARIOS
+----------------------------------------
+31. Filter objects based on property value
+32. Filter users by role (admin/user)
+33. Filter products by price range
+34. Filter API response data
+35. Filter search results dynamically
+36. Filter completed tasks from todo list
+37. Filter inactive records
+38. Filter nested object arrays
+39. Filter items based on date
+40. Filter permissions from roles array
+
+SECTION 5: FILTER VS OTHER METHODS (HIGH VALUE)
+-----------------------------------------------
+41. Difference between filter() and map()
+42. Difference between filter() and forEach()
+43. Difference between filter() and reduce()
+44. filter() vs for loop
+45. When should we not use filter()?
+46. Can filter() replace map()?
+47. Can filter() be chained with map()?
+48. Can filter() be chained with reduce()?
+49. filter() vs find()
+50. filter() vs some() and every()
+
+SECTION 6: ADVANCED & TRICKY QUESTIONS
+--------------------------------------
+51. What happens if filter() callback returns undefined?
+52. How does filter() handle empty slots?
+53. Does filter() skip empty elements?
+54. What happens if array length changes during filter()?
+55. Can filter() be stopped early?
+56. How does filter() behave with NaN?
+57. Is filter() shallow copy or deep copy?
+58. Performance comparison: filter() vs for loop
+59. Can we use async/await with filter()?
+60. Why filter(async fn) does not work as expected?
+
+SECTION 7: EDGE CASE & OUTPUT QUESTIONS
+---------------------------------------
+61. Output of filter() without return
+62. Output of filter() on empty array
+63. Output of filter() on null or undefined
+64. Output when filter() callback throws error
+65. filter() with sparse arrays
+66. filter() with mixed data types
+67. filter() using Boolean constructor
+68. filter() with truthy/falsy values
+69. filter() with Math conditions
+70. filter() with parseInt issue
+
+SECTION 8: POLYFILL & INTERNAL WORKING
+-------------------------------------
+71. Write a polyfill for Array.filter()
+72. How does filter() work internally?
+73. Time complexity of filter()
+74. Space complexity of filter()
+75. Why filter() is functional programming method?
+76. Is filter() pure function?
+77. Does filter() mutate object references?
+78. filter() memory behavior
+79. filter() execution order
+80. filter() callback binding
+
+SECTION 9: REACT / FRONTEND INTERVIEW QUESTIONS
+-----------------------------------------------
+81. How is filter() used in React?
+82. Filtering list before rendering in React
+83. Search functionality using filter()
+84. filter() vs conditional rendering
+85. filter() with state updates
+86. filter() performance in React
+87. filter() inside JSX
+88. Combining filter() and map() in React
+89. Handling empty results after filter()
+90. filter() in controlled components
+
+SECTION 10: COMMON MISTAKES (INTERVIEW FAVORITE)
+-----------------------------------------------
+91. Forgetting return in filter()
+92. Returning non-boolean values unintentionally
+93. Mutating array inside filter()
+94. Using filter() for transformation
+95. Using filter() instead of find()
+96. Assuming filter() returns single value
+97. Using async callback in filter()
+98. Overusing filter()
+99. Incorrect chaining with filter()
+100. Filtering on undefined properties
+
+SECTION 11: RAPID-FIRE ONE LINERS
+--------------------------------
+101. Does filter() modify original array?
+102. Does filter() change array length?
+103. Can filter() return empty array?
+104. Can filter() return same array?
+105. Can filter() return object?
+106. Does filter() skip empty elements?
+107. Is filter() chainable?
+108. Can filter() throw error?
+109. Can filter() be used on NodeList?
+110. Is filter() lazy or eager?
+
+END OF FILE
+===========

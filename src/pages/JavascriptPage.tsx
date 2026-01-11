@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const JavascriptPage = () => {
     return (
-        <div className="py-12 px-4">
-            <div className="max-w-7xl mx-auto">
+        <div className="py-12">
+            <div className="container-fluid">
                 {/* Hero Section */}
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-pulse flex flex-col md:flex-row items-center justify-center gap-4">

@@ -59,6 +59,10 @@ import ReactMemoExample from './topics/03-performance/01-react-memo/ReactMemoExa
 import CodeSplittingExample from './topics/03-performance/02-code-splitting/CodeSplittingExample';
 import VirtualizationExample from './topics/03-performance/03-virtualization/VirtualizationExample';
 import BundleAnalysisExample from './topics/03-performance/04-bundle-analysis/BundleAnalysisExample';
+import MernPlanPage from './pages/MernPlanPage';
+import AIPlaybookPage from './pages/AIPlaybookPage';
+import MernBoilerplatePage from './pages/MernBoilerplatePage';
+
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -67,20 +71,20 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
         {/* Navigation Header */}
-        <nav className="bg-black bg-opacity-40 backdrop-blur-xl border-b border-white border-opacity-20 sticky top-0 z-50 shadow-2xl">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="bg-[#0f172a] border-b border-white/10 sticky top-0 z-[100] shadow-2xl">
+          <div className="container-fluid">
             <div className="flex items-center justify-between h-20">
 
               {/* Logo */}
-              <Link to="/" className="flex items-center gap-3 group">
-                <div className="text-4xl transform group-hover:scale-110 transition-transform duration-200">
+              <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
+                <div className="text-3xl sm:text-4xl transform group-hover:scale-110 transition-transform duration-200">
                   <i className="fa-solid fa-fish"></i>
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">
-                    React Hooks Mastery
+                  <h1 className="text-lg sm:text-2xl font-black text-white group-hover:text-blue-300 transition-colors uppercase tracking-tighter sm:tracking-normal">
+                    React Hooks <span className="hidden sm:inline">Mastery</span>
                   </h1>
-                  <p className="text-xs text-blue-200 opacity-75">Complete Learning Guide</p>
+                  <p className="text-[8px] sm:text-xs text-blue-200 opacity-75 font-bold uppercase tracking-widest">Learning Guide</p>
                 </div>
               </Link>
 
@@ -129,62 +133,65 @@ function App() {
                   <i className="fa-solid fa-user-graduate"></i>
                   <span>Interview Prep</span>
                 </Link>
+
+                <Link
+                  to="/mern-plan"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all duration-200 font-semibold"
+                >
+                  <i className="fa-solid fa-calendar-check text-blue-400"></i>
+                  <span>30-Day Plan</span>
+                </Link>
+
+                <Link
+                  to="/ai-playbook"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all duration-200 font-semibold"
+                >
+                  <i className="fa-solid fa-robot text-purple-400"></i>
+                  <span>AI Playbook</span>
+                </Link>
+                <Link
+                  to="/mern-boilerplate"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all duration-200 font-semibold"
+                >
+                  <i className="fa-solid fa-code-branch text-emerald-400"></i>
+                  <span>Boilerplate</span>
+                </Link>
+
               </div>
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden text-white p-2 bg-transparent hover:bg-white hover:bg-opacity-10 rounded-lg transition-all"
+                className="md:hidden text-white p-2.5 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/10 transition-all active:scale-95"
               >
-                <i className={`fa-solid text-2xl ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+                <i className={`fa-solid text-xl transition-transform duration-300 ${mobileMenuOpen ? 'fa-times rotate-90' : 'fa-bars'}`}></i>
               </button>
             </div>
           </div>
 
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <div className="md:hidden bg-black bg-opacity-60 backdrop-blur-lg border-t border-white border-opacity-10">
-              <div className="px-4 py-4 space-y-2">
+          {/* Mobile Menu Overlay */}
+          <div className={`md:hidden fixed inset-0 top-20 bg-[#0f172a] z-[90] transition-all duration-500 origin-top ${mobileMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}`}>
+            <div className="container-fluid py-8 flex flex-col gap-3">
+              {[
+                { to: "/", icon: "fa-home", label: "Home" },
+                { to: "/nodejs", icon: "fa-node", label: "Node.js", color: "text-green-400" },
+                { to: "/interview", icon: "fa-user-graduate", label: "Interview Prep" },
+                { to: "/mern-plan", icon: "fa-calendar-check", label: "30-Day Plan", color: "text-blue-400" },
+                { to: "/ai-playbook", icon: "fa-robot", label: "AI Playbook", color: "text-purple-400" },
+                { to: "/mern-boilerplate", icon: "fa-code-branch", label: "Boilerplate", color: "text-emerald-400" }
+              ].map((link) => (
                 <Link
-                  to="/"
+                  key={link.to}
+                  to={link.to}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-3 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all"
+                  className="flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/5 border border-white/5 text-white hover:bg-white/10 active:scale-95 transition-all text-lg font-black uppercase tracking-widest"
                 >
-                  <i className="fa-solid fa-home mr-3"></i>Home
+                  <i className={`fa-solid ${link.icon} w-8 ${link.color || ''}`}></i>
+                  {link.label}
                 </Link>
-                <a
-                  href="https://react.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-3 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all"
-                >
-                  <i className="fa-solid fa-book mr-3"></i>React Docs
-                </a>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-3 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all"
-                >
-                  <i className="fa-brands fa-github mr-3"></i>GitHub
-                </a>
-                <Link
-                  to="/nodejs"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-3 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all"
-                >
-                  <i className="fa-brands fa-node mr-3 text-green-400"></i>Node.js
-                </Link>
-                <Link
-                  to="/interview"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-3 rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-all"
-                >
-                  <i className="fa-solid fa-user-graduate mr-3"></i>Interview Prep
-                </Link>
-              </div>
+              ))}
             </div>
-          )}
+          </div>
         </nav>
 
         {/* Main Content */}
@@ -263,7 +270,11 @@ function App() {
           <Route path="/performance/code-splitting" element={<CodeSplittingExample />} />
           <Route path="/performance/virtualization" element={<VirtualizationExample />} />
           <Route path="/performance/bundle-analysis" element={<BundleAnalysisExample />} />
+          <Route path="/mern-plan" element={<MernPlanPage />} />
+          <Route path="/ai-playbook" element={<AIPlaybookPage />} />
+          <Route path="/mern-boilerplate" element={<MernBoilerplatePage />} />
         </Routes>
+
       </div>
     </Router >
   );

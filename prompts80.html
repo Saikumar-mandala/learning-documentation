@@ -1,0 +1,2243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project Name – AI Playbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              ui: ["system-ui", "-apple-system", "BlinkMacSystemFont"],
+              mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-ui"
+  >
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur border-b border-slate-200 dark:border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <h1 class="text-xl font-semibold">
+          Project Name – Full Stack AI Playbook
+        </h1>
+        <p class="text-sm text-slate-500">
+          Optimized for copy & paste into IDEs and AI tools
+        </p>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="max-w-7xl mx-auto px-6 py-10 space-y-16">
+      <!-- PART I -->
+      <section>
+        <h2
+          class="text-2xl font-semibold border-b border-slate-200 dark:border-slate-800 pb-2"
+        >
+          PART I – PROJECT FOUNDATION
+        </h2>
+
+        <!-- Item -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            1. Project Bootstrap & Structure
+          </h3>
+
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+
+            <pre
+              class="p-5 text-sm font-mono whitespace-pre-wrap overflow-x-auto leading-relaxed"
+            >
+Initialize a full-stack project for [Project Name]:
+
+Backend:
+- Node.js + TypeScript + Express
+- Folder structure: src/ (routes, controllers, services, models, utils, config)
+- Dependencies: express, cors, helmet, dotenv
+- tsconfig.json optimized for Node.js
+- .env.example
+- README.md
+
+Frontend:
+- React + TypeScript + Vite (or Next.js)
+- Tailwind CSS configured
+- Folder structure: components, pages, hooks, services
+- .env.example
+
+Include:
+- ESLint + Prettier
+- Development scripts
+- GET /api/health endpoint
+            </pre>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            2. Environment Configuration
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend .env:
+  NODE_ENV=development
+  PORT=5000
+  DATABASE_URL=
+  JWT_SECRET=
+  JWT_REFRESH_SECRET=
+  CORS_ORIGIN=http://localhost:3000
+  
+  Frontend .env:
+  VITE_API_URL=http://localhost:5000
+  VITE_APP_NAME=[Project Name]
+  VITE_ENVIRONMENT=development
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            3. Database Connection & Setup
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Set up MongoDB (Mongoose) or PostgreSQL (Prisma)
+  - Connection retry logic
+  - Health check endpoint
+  - Graceful shutdown
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">4. Base API Architecture</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  REST API with /api/v1 versioning
+  Controller → Service → Model
+  Standardized responses
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">5. User Schema Design</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  User:
+  - email (unique)
+  - password (hashed)
+  - role
+  - isActive
+  - emailVerified
+  - timestamps
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">6. Authentication System</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  JWT auth with access + refresh tokens
+  Login, signup, refresh, logout
+  Rate limiting enabled
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">7. Password Security</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  bcrypt hashing (12 rounds)
+  Password strength validation
+  Never return passwords
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">8. Auth Middleware</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Verify JWT
+  Attach req.user
+  Role-based guards
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">9. Global Error Handling</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Central AppError
+  Async error wrapper
+  Consistent error responses
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">10. API Testing & Docs</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Postman / Thunder Client
+  Auth + Users collections
+  Optional Swagger
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">11. User Registration Flow</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - Generate email verification token
+  - Store token + expiry
+  - Send verification email
+  - Do not auto-verify user
+  
+  Frontend:
+  - Signup form
+  - Password strength meter
+  - Validation + success states
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">12. Login System</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Frontend:
+  - Email + password
+  - Show/hide password
+  - Error handling
+  - Redirect to dashboard
+  
+  Backend:
+  - Validate credentials
+  - Check email verification
+  - Update lastLogin
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">13. Password Reset Flow</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - forgot-password (1h token)
+  - reset-password
+  - Hash new password
+  
+  Frontend:
+  - Reset form
+  - Strength indicator
+  - Success redirect
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            14. User Profile Management
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Endpoints:
+  - GET /users/me
+  - PUT /users/me
+  
+  Fields:
+  - name
+  - bio
+  - avatar
+  - location
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            15. Role-Based Access Control (RBAC)
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Roles:
+  - user
+  - admin
+  
+  Admin actions:
+  - View users
+  - Change roles
+  - Delete users
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">16. User Dashboard</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - Dashboard stats
+  - Activity feed
+  
+  Frontend:
+  - Stat cards
+  - Recent activity
+  - Empty states
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">17. Account Settings</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Sections:
+  - Profile
+  - Security
+  - Notifications
+  - Delete account
+  
+  Includes confirmations & alerts
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">18. Email Verification</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  - Verification token (24h)
+  - Verify endpoint
+  - Resend verification (rate limited)
+  
+  Frontend verification page
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            19. Two-Factor Authentication (2FA)
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  - speakeasy + qrcode
+  - Setup & verify endpoints
+  - Backup codes
+  - Login challenge
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">20. Session Management</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Session tracking:
+  - Device
+  - Browser
+  - IP
+  - Last activity
+  
+  Endpoints:
+  - List sessions
+  - Logout per session
+  - Logout all
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 21 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">21. Core App Data Schema</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Entity: [Entity] (Task, Note, Post)
+  
+  Fields:
+  - id
+  - userId (indexed)
+  - title (max 200 chars)
+  - description (max 5000 chars)
+  - status (draft | active | completed | archived)
+  - priority (low | medium | high)
+  - tags (string[])
+  - metadata (JSON)
+  - isDeleted
+  - timestamps
+  
+  Indexes:
+  - userId
+  - status
+  - createdAt
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 22 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            22. Create Operation (CREATE)
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - POST /api/v1/[entities]
+  - Authenticate user
+  - Validate input
+  - Assign userId
+  - Return 201
+  
+  Frontend:
+  - Create form/modal
+  - Validation + loading
+  - Success feedback
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 23 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">23. Read Operations (READ)</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Endpoints:
+  - GET /[entities]
+  - GET /[entities]/:id
+  
+  Features:
+  - Pagination
+  - Ownership check
+  - Sorting by createdAt DESC
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 24 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            24. Update Operation (UPDATE)
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Endpoints:
+  - PUT /[entities]/:id
+  - PATCH /[entities]/:id
+  
+  Rules:
+  - Verify ownership
+  - Validate updates
+  - Return updated entity
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 25 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            25. Delete Operation (DELETE)
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Endpoint:
+  - DELETE /[entities]/:id
+  
+  Behavior:
+  - Soft delete (isDeleted = true)
+  - Ownership verification
+  - Optional undo window
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 26 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            26. Pagination Implementation
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Params:
+  - page (default 1)
+  - limit (default 20, max 100)
+  
+  Return:
+  - page
+  - total
+  - totalPages
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 27 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">27. Search Functionality</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Endpoint:
+  - GET /[entities]/search?q=
+  
+  Features:
+  - Text search (title + description)
+  - User-scoped results
+  - Min 2 characters
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 28 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">28. Filtering System</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Filters:
+  - status
+  - priority
+  
+  Combine with:
+  - Pagination
+  - Search
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 29 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">29. Sorting Mechanism</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Sorting:
+  - Field whitelist
+  - asc / desc
+  
+  Default:
+  - createdAt DESC
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 30 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">30. Data Validation</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - Zod / Joi schemas
+  - Validate create + update
+  
+  Frontend:
+  - React Hook Form
+  - Field-level errors
+  - Disable invalid submit
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 31 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">31. File Upload System</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - Multer middleware
+  - Max size: 10MB
+  - File type validation
+  - Unique filenames
+  
+  Storage:
+  - Cloudinary (recommended)
+  
+  Frontend:
+  - Drag & drop
+  - Preview
+  - Upload progress
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 32 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">32. Image Processing</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - sharp library
+  - Resize & compress (~80%)
+  - Convert to WebP
+  - Generate thumbnails
+  
+  Sizes:
+  - 200px / 800px / 1200px
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 33 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            33. Real-Time Notifications
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Notification types:
+  - info
+  - success
+  - warning
+  - error
+  
+  Features:
+  - Mark read/unread
+  - Badge count
+  - Toast alerts
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 34 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            34. WebSocket Real-Time Updates
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - socket.io
+  - JWT-authenticated sockets
+  - User-specific rooms
+  
+  Events:
+  - entity_created
+  - entity_updated
+  - entity_deleted
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 35 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            35. Email Service Integration
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - Nodemailer / SendGrid
+  - Central email service
+  - Handlebars templates
+  
+  Emails:
+  - Welcome
+  - Verify email
+  - Password reset
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 36 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            36. Third-Party API Integration
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Structure:
+  - /services/external
+  - One service per API
+  
+  Best practices:
+  - Env-stored API keys
+  - Retry logic
+  - Rate-limit handling
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 37 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            37. Payment Integration (Stripe)
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - Create PaymentIntent
+  - Webhook handling
+  
+  Frontend:
+  - Stripe Elements
+  - Payment status UI
+  
+  DB:
+  - Transactions
+  - Payment status
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 38 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">38. Background Jobs</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Tools:
+  - Bull + Redis
+  
+  Use cases:
+  - Email sending
+  - Image processing
+  - Cleanup tasks
+  
+  Features:
+  - Retries
+  - Cron jobs
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 39 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">39. Analytics & Tracking</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Track:
+  - Page views
+  - User actions
+  - Custom events
+  
+  Optional:
+  - Google Analytics
+  - Privacy controls
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 40 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">40. Export & Reporting</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - CSV / JSON export
+  - Stream large datasets
+  
+  Frontend:
+  - Export button
+  - Progress feedback
+  - Filtered exports
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 41 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">41. Caching Strategy</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Caching layers:
+  - In-memory (Node cache)
+  - Redis (recommended)
+  
+  Use cases:
+  - Read-heavy endpoints
+  - Session data
+  - Rate limits
+  
+  TTL strategy per resource
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 42 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">42. Rate Limiting</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Protect APIs with rate limits
+  
+  Rules:
+  - Auth routes stricter
+  - Public routes relaxed
+  
+  Tools:
+  - express-rate-limit
+  - Redis store
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 43 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">43. Audit Logs</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Track sensitive actions:
+  - Login attempts
+  - Role changes
+  - Deletions
+  
+  Fields:
+  - userId
+  - action
+  - timestamp
+  - metadata
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 44 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">44. Feature Flags</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Enable/disable features safely
+  
+  Approach:
+  - Env-based flags
+  - DB-driven flags
+  
+  Use cases:
+  - Beta features
+  - Gradual rollouts
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 45 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            45. API Versioning Strategy
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Versioning options:
+  - URI (/api/v1)
+  - Header-based
+  
+  Rules:
+  - Never break existing versions
+  - Deprecation policy
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 46 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            46. API Response Optimization
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Optimize responses:
+  - Field selection
+  - Compression (gzip/brotli)
+  - Pagination limits
+  
+  Goal:
+  - Reduce payload size
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 47 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">47. Security Headers</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Use helmet to set:
+  - CSP
+  - HSTS
+  - X-Frame-Options
+  - X-Content-Type-Options
+  
+  Protect against common attacks
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 48 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">48. Dependency Management</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Best practices:
+  - Lockfile commits
+  - Regular updates
+  - Security audits
+  
+  Tools:
+  - npm audit
+  - Dependabot
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 49 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">49. Feature Documentation</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Document features:
+  - Purpose
+  - API endpoints
+  - Edge cases
+  
+  Keep docs updated with releases
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 50 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">50. Pre-Production Review</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Review checklist:
+  - Security review
+  - Performance checks
+  - UX review
+  - Rollback plan
+  
+  Approval before production deploy
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 51 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">51. Environment Separation</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Environments:
+  - Development
+  - Staging
+  - Production
+  
+  Backend:
+  - Separate DB URLs
+  - Unique secrets
+  - CORS per environment
+  
+  Frontend:
+  - API URLs
+  - Feature flags
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 52 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">52. Docker Setup</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - Node.js Alpine image
+  - Build TypeScript
+  - Expose API port
+  
+  Frontend:
+  - Static build
+  - Serve via Nginx
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 53 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">53. Backend Deployment</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Platforms:
+  - Railway
+  - Render
+  - Fly.io
+  - AWS
+  
+  Steps:
+  - Connect repo
+  - Set env vars
+  - Auto deploy
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 54 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">54. Frontend Deployment</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Recommended:
+  - Vercel
+  
+  Steps:
+  - Import repo
+  - Configure env vars
+  - Deploy
+  
+  Verify auth + API connectivity
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 55 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">55. Database Migration</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  MongoDB:
+  - migrate-mongo
+  
+  PostgreSQL:
+  - Prisma migrate
+  
+  Rules:
+  - Test locally
+  - Backup before prod
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 56 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">56. CI/CD Pipeline</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Pipeline:
+  1. Install dependencies
+  2. Run tests
+  3. Lint
+  4. Build
+  5. Deploy
+  
+  Benefits:
+  - Faster releases
+  - Fewer errors
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 57 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">57. Monitoring & Logging</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Monitoring:
+  - Error tracking
+  - Performance metrics
+  
+  Logging:
+  - Structured logs
+  - Log levels
+  - No sensitive data
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 58 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">58. Backup Strategy</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Database:
+  - Daily automated backups
+  - 30-day retention
+  - Restore testing
+  
+  Files:
+  - User uploads
+  - Logs
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 59 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            59. SSL / HTTPS Configuration
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Frontend:
+  - Auto HTTPS
+  - Force redirect
+  
+  Backend:
+  - Managed SSL
+  - Secure cookies
+  - HSTS
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 60 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">60. Production Checklist</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Security:
+  - Protected routes
+  - Validation
+  - HTTPS enabled
+  
+  Performance:
+  - Indexes
+  - Caching
+  - Optimized assets
+  
+  Monitoring:
+  - Logs
+  - Alerts
+  - Backups
+      </pre
+            >
+          </div>
+        </div>
+        <!-- 61 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            61. Advanced Data Visualization
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Charts:
+  - Line (trends)
+  - Bar (comparisons)
+  - Pie (distribution)
+  - Area (cumulative)
+  
+  Features:
+  - Responsive
+  - Tooltips
+  - Empty states
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 62 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">62. Keyboard Shortcuts</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Shortcuts:
+  - Cmd/Ctrl + K → Search
+  - Cmd/Ctrl + S → Save
+  - Cmd/Ctrl + N → New
+  - Esc → Close modal
+  
+  Extras:
+  - Help modal
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 63 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">63. Infinite Scroll</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Features:
+  - Auto load on scroll
+  - Loading indicators
+  - End-of-list message
+  
+  Fallback:
+  - Load More button
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 64 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">64. Drag and Drop</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Use cases:
+  - Reorder lists
+  - Kanban boards
+  - File uploads
+  
+  Features:
+  - Smooth animations
+  - Touch support
+  - Keyboard accessible
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 65 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            65. Advanced Search with Filters
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Search:
+  - Full-text
+  - Highlight matches
+  - Debounced input
+  
+  Filters:
+  - Status
+  - Priority
+  - Date ranges
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 66 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            66. Real-Time Collaboration
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Features:
+  - Live updates
+  - Online presence
+  - Typing indicators
+  - Conflict handling
+  
+  Tech:
+  - WebSockets
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 67 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            67. Activity Feed & Timeline
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Activities:
+  - Created
+  - Updated
+  - Deleted
+  - Status changes
+  
+  UI:
+  - Chronological timeline
+  - Real-time updates
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 68 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">68. Theming System</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Themes:
+  - Light
+  - Dark
+  - Custom
+  
+  Features:
+  - CSS variables
+  - User preference storage
+  - Smooth transitions
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 69 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">69. Accessibility (A11y)</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Requirements:
+  - Keyboard navigation
+  - Screen reader support
+  - ARIA labels
+  - Focus management
+  
+  Standards:
+  - WCAG compliance
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 70 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            70. Internationalization (i18n)
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Features:
+  - Multiple languages
+  - Language selector
+  - Persist preference
+  - Date/number formatting
+  
+  Advanced:
+  - RTL support
+      </pre
+            >
+          </div>
+        </div>
+        <!-- 71 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">71. Unit Testing – Backend</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Tools:
+  - Jest
+  - ts-jest
+  
+  Targets:
+  - Services ≥ 80%
+  - Utils ≥ 90%
+  
+  Focus:
+  - Business logic
+  - Edge cases
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 72 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            72. Integration Testing – API
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Tools:
+  - Supertest
+  - Test database
+  
+  Tests:
+  - Auth flows
+  - CRUD operations
+  - Access control
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 73 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            73. Frontend Component Testing
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Tools:
+  - React Testing Library
+  - Jest
+  
+  Tests:
+  - Forms
+  - Loading states
+  - Error handling
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 74 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">
+            74. End-to-End (E2E) Testing
+          </h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Tools:
+  - Playwright or Cypress
+  
+  Scenarios:
+  - Signup
+  - Login
+  - Create entity
+  - Logout
+  
+  CI:
+  - Headless runs
+  - Screenshots on failure
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 75 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">75. Performance Testing</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Backend:
+  - Load testing (Artillery)
+  
+  Frontend:
+  - Lighthouse audits
+  
+  Targets:
+  - API p95 < 500ms
+  - FCP < 2s
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 76 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">76. Security Testing</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Tests:
+  - Auth bypass attempts
+  - Authorization checks
+  - Rate limiting
+  - Injection & XSS
+  
+  Tools:
+  - npm audit
+  - OWASP checklist
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 77 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">77. Code Quality & Linting</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Tools:
+  - ESLint
+  - Prettier
+  - Husky
+  
+  Rules:
+  - No unused vars
+  - Typed code only
+  
+  Automation:
+  - Pre-commit hooks
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 78 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">78. Documentation</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Docs:
+  - README
+  - API reference
+  - Env variables
+  - Setup guide
+  
+  Best practice:
+  - Keep docs current
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 79 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">79. Continuous Improvement</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Track:
+  - Performance metrics
+  - Error rates
+  - User feedback
+  
+  Process:
+  - Iterative releases
+  - Regular reviews
+      </pre
+            >
+          </div>
+        </div>
+
+        <!-- 80 -->
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-3">80. Maintenance Plan</h3>
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden"
+          >
+            <button
+              onclick="copyPrompt(this)"
+              class="absolute top-3 right-3 text-xs px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Copy
+            </button>
+            <pre class="p-5 text-sm font-mono whitespace-pre-wrap">
+  Tasks:
+  - Dependency updates
+  - Security audits
+  - Backups
+  - Monitoring
+  
+  Schedule:
+  - Daily checks
+  - Weekly reviews
+  - Monthly audits
+      </pre
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Script -->
+    <script>
+      function copyPrompt(btn) {
+        const text = btn.nextElementSibling.innerText;
+        navigator.clipboard.writeText(text);
+        btn.innerText = "Copied ✓";
+        btn.classList.remove("bg-blue-600");
+        btn.classList.add("bg-green-600");
+        setTimeout(() => {
+          btn.innerText = "Copy";
+          btn.classList.remove("bg-green-600");
+          btn.classList.add("bg-blue-600");
+        }, 1200);
+      }
+    </script>
+  </body>
+</html>

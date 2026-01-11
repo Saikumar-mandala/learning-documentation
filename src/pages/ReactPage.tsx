@@ -125,12 +125,12 @@ const ReactPage = () => {
     ];
 
     return (
-        <div className="py-12 px-4">
-            <div className="max-w-7xl mx-auto">
+        <div className="py-12">
+            <div className="container-fluid">
                 {/* Hero Section */}
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-pulse flex flex-col md:flex-row items-center justify-center gap-4">
-                        <i className="fa-solid fa-fish"></i> React Hooks Mastery
+                    <h1 className="text-3xl sm:text-4xl md:text-7xl font-black text-white mb-6 animate-pulse flex flex-col md:flex-row items-center justify-center gap-4 tracking-tighter sm:tracking-normal leading-none">
+                        <i className="fa-solid fa-fish"></i> React Hooks <br className="sm:hidden" /> Mastery
                     </h1>
                     <p className="text-xl md:text-2xl text-blue-200 mb-4">
                         Learn All React Hooks with Real-Time Examples
@@ -357,7 +357,46 @@ const ReactPage = () => {
                     ))}
                 </div>
 
-                {/* Info Section */}
+                {/* Featured Resources Section */}
+                <div className="mt-16">
+                    <h2 className="text-4xl font-bold text-white mb-8 text-center border-b border-white border-opacity-20 pb-4">
+                        <i className="fa-solid fa-star mr-3 text-yellow-500"></i> Featured Resources
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <Link to="/mern-plan">
+                            <div className="bg-gradient-to-br from-indigo-900 via-blue-900 to-indigo-950 p-8 rounded-2xl shadow-2xl border-2 border-blue-500 border-opacity-30 hover:scale-[1.02] transition-transform group relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <i className="fa-solid fa-calendar-check text-8xl"></i>
+                                </div>
+                                <h3 className="text-3xl font-bold text-white mb-4">30-Day MERN Roadmap</h3>
+                                <p className="text-blue-100 text-lg mb-6 leading-relaxed">
+                                    A structured, job-focused plan to master the MERN stack and Next.js from scratch.
+                                    Includes weekly tasks, interview questions, and a final capstone project.
+                                </p>
+                                <div className="inline-flex items-center gap-2 text-blue-400 font-bold text-xl group-hover:gap-4 transition-all">
+                                    Start Learning <i className="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </Link>
+                        <Link to="/ai-playbook">
+                            <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-950 p-8 rounded-2xl shadow-2xl border-2 border-purple-500 border-opacity-30 hover:scale-[1.02] transition-transform group relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <i className="fa-solid fa-robot text-8xl"></i>
+                                </div>
+                                <h3 className="text-3xl font-bold text-white mb-4">Full Stack AI Playbook</h3>
+                                <p className="text-purple-100 text-lg mb-6 leading-relaxed">
+                                    Maximize your efficiency with 80+ optimized AI prompts for bootstrapping,
+                                    CRUD operations, authentication, performance, and more.
+                                </p>
+                                <div className="inline-flex items-center gap-2 text-purple-400 font-bold text-xl group-hover:gap-4 transition-all">
+                                    Access Playbook <i className="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Info Section conviction */}
                 <div className="mt-16 bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
                     <h2 className="text-3xl font-bold text-white mb-4">
                         <i className="fa-solid fa-book-open mr-3"></i> What You'll Learn
