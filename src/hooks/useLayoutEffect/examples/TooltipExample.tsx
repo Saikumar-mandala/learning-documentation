@@ -3,17 +3,22 @@ import { useState, useLayoutEffect, useRef } from 'react';
 const TooltipExample = () => {
     const [show, setShow] = useState(false);
     const [tooltipHeight, setTooltipHeight] = useState(0);
+    const [position, setPosition] = useState({ top: 0, left: 0 });
     const buttonRef = useRef<HTMLButtonElement>(null);
     const tooltipRef = useRef<HTMLDivElement>(null);
 
     // We need to know the height of the tooltip to position it correctly ABOVE the button.
     // If we use useEffect, the tooltip might render below/wrong first, then jump up.
     useLayoutEffect(() => {
-        if (tooltipRef.current && show) {
+        if (tooltipRef.current && buttonRef.current && show) {
             const { height } = tooltipRef.current.getBoundingClientRect();
             setTooltipHeight(height);
+            setPosition({
+                top: buttonRef.current.offsetTop - height - 10,
+                left: buttonRef.current.offsetLeft
+            });
         }
-    }, [show]);
+    }, [show, tooltipHeight]);
 
     return (
         <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-6 rounded-xl shadow-2xl text-white relative overflow-hidden">
@@ -34,8 +39,8 @@ const TooltipExample = () => {
                         ref={tooltipRef}
                         style={{
                             position: 'absolute',
-                            top: buttonRef.current ? buttonRef.current.offsetTop - tooltipHeight - 10 : 0,
-                            left: buttonRef.current ? buttonRef.current.offsetLeft : 0,
+                            top: position.top,
+                            left: position.left,
                         }}
                         className="bg-black text-white text-sm p-2 rounded shadow-xl max-w-xs z-10"
                     >

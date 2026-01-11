@@ -1,0 +1,287 @@
+﻿
+> allin-one-react-hook@0.0.0 lint
+> eslint .
+
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useCallback\examples\MemoizedList.tsx
+   7:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useCallback\examples\MemoizedList.tsx:7:5
+   5 |     // Visual feedback for re-render
+   6 |     const renderCount = React.useRef(0);
+>  7 |     renderCount.current++;
+     |     ^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+   8 |
+   9 |     return (
+  10 |         <li className="flex justify-between items-center bg-white p-3 rounded shadow-sm mb-2 text-gray-800">                                                                                              react-hooks/refs
+   7:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useCallback\examples\MemoizedList.tsx:7:5
+   5 |     // Visual feedback for re-render
+   6 |     const renderCount = React.useRef(0);
+>  7 |     renderCount.current++;
+     |     ^^^^^^^^^^^^^^^^^^^ Cannot update ref during render
+   8 |
+   9 |     return (
+  10 |         <li className="flex justify-between items-center bg-white p-3 rounded shadow-sm mb-2 text-gray-800">                                                                                                    react-hooks/refs
+  14:31  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useCallback\examples\MemoizedList.tsx:14:31
+  12 |             <div className="flex items-center gap-3">
+  13 |                 <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">
+> 14 |                     Renders: {renderCount.current}
+     |                               ^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  15 |                 </span>
+  16 |                 <button
+  17 |                     onClick={() => onRemove(item)}  react-hooks/refs
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useContext\context\AuthContext.tsx
+  50:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useContext\context\ThemeContext.tsx
+  28:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useEffect\examples\DataFetching.tsx
+  51:22  error  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useEffect\examples\DependencyDemo.tsx
+  10:9  error  Error: Cannot access variable before it is declared
+
+`addLog` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useEffect\examples\DependencyDemo.tsx:10:9
+   8 |     // Effect 1: No Dependency Array
+   9 |     useEffect(() => {
+> 10 |         addLog('ΓÜí Effect 1 ran (No Deps - Every Render)');
+     |         ^^^^^^ `addLog` accessed before it is declared
+  11 |     });
+  12 |
+  13 |     // Effect 2: Empty Dependency Array
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useEffect\examples\DependencyDemo.tsx:32:5
+  30 |     }, [text]);
+  31 |
+> 32 |     const addLog = (message: string) => {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |         setEffectLog(prev => [message, ...prev].slice(0, 5));
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |     };
+     | ^^^^^^^ `addLog` is declared here
+  35 |
+  36 |     return (
+  37 |         <div className="bg-gradient-to-br from-gray-700 to-gray-900 p-6 rounded-xl shadow-2xl">  react-hooks/immutability
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useImperativeHandle\examples\CustomInput.tsx
+  10:51  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useLayoutEffect\examples\FlickerDemo.tsx
+  12:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useLayoutEffect\examples\FlickerDemo.tsx:12:13
+  10 |         if (isLayoutEffect) return;
+  11 |         if (value === 0) {
+> 12 |             setValue(10 + Math.random() * 200);
+     |             ^^^^^^^^ Avoid calling setState() directly within an effect
+  13 |         }
+  14 |     }, [value, isLayoutEffect]);
+  15 |   react-hooks/set-state-in-effect
+  22:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useLayoutEffect\examples\FlickerDemo.tsx:22:13
+  20 |         if (!isLayoutEffect) return;
+  21 |         if (value === 0) {
+> 22 |             setValue(10 + Math.random() * 200);
+     |             ^^^^^^^^ Avoid calling setState() directly within an effect
+  23 |         }
+  24 |     }, [value, isLayoutEffect]);
+  25 |  react-hooks/set-state-in-effect
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useLayoutEffect\examples\TooltipExample.tsx
+  35:32  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useLayoutEffect\examples\TooltipExample.tsx:35:32
+  33 |                     <div
+  34 |                         ref={tooltipRef}
+> 35 |                         style={{
+     |                                ^
+> 36 |                             position: 'absolute',
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 37 |                             top: buttonRef.current ? buttonRef.current.offsetTop - tooltipHeight - 10 : 0,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 38 |                             left: buttonRef.current ? buttonRef.current.offsetLeft : 0,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 39 |                         }}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  40 |                         className="bg-black text-white text-sm p-2 rounded shadow-xl max-w-xs z-10"
+  41 |                     >
+  42 |                         <p className="font-bold mb-1">I am a tooltip!</p>  react-hooks/refs
+  37:34  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useLayoutEffect\examples\TooltipExample.tsx:37:34
+  35 |                         style={{
+  36 |                             position: 'absolute',
+> 37 |                             top: buttonRef.current ? buttonRef.current.offsetTop - tooltipHeight - 10 : 0,
+     |                                  ^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  38 |                             left: buttonRef.current ? buttonRef.current.offsetLeft : 0,
+  39 |                         }}
+  40 |                         className="bg-black text-white text-sm p-2 rounded shadow-xl max-w-xs z-10"                                                                                                                                                                                                                                                                                                                                                                                           react-hooks/refs
+  37:54  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useLayoutEffect\examples\TooltipExample.tsx:37:54
+  35 |                         style={{
+  36 |                             position: 'absolute',
+> 37 |                             top: buttonRef.current ? buttonRef.current.offsetTop - tooltipHeight - 10 : 0,
+     |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  38 |                             left: buttonRef.current ? buttonRef.current.offsetLeft : 0,
+  39 |                         }}
+  40 |                         className="bg-black text-white text-sm p-2 rounded shadow-xl max-w-xs z-10"                                                                                                                                                                                                                                                                                                                                                             react-hooks/refs
+  38:35  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useLayoutEffect\examples\TooltipExample.tsx:38:35
+  36 |                             position: 'absolute',
+  37 |                             top: buttonRef.current ? buttonRef.current.offsetTop - tooltipHeight - 10 : 0,
+> 38 |                             left: buttonRef.current ? buttonRef.current.offsetLeft : 0,
+     |                                   ^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  39 |                         }}
+  40 |                         className="bg-black text-white text-sm p-2 rounded shadow-xl max-w-xs z-10"
+  41 |                     >                                                                                                                                                                                                                                                                                                                                                                                                     react-hooks/refs
+  38:35  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useLayoutEffect\examples\TooltipExample.tsx:38:35
+  36 |                             position: 'absolute',
+  37 |                             top: buttonRef.current ? buttonRef.current.offsetTop - tooltipHeight - 10 : 0,
+> 38 |                             left: buttonRef.current ? buttonRef.current.offsetLeft : 0,
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  39 |                         }}
+  40 |                         className="bg-black text-white text-sm p-2 rounded shadow-xl max-w-xs z-10"
+  41 |                     >                                                                                                                                                                                                                                                                                                                                                                  react-hooks/refs
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useRef\examples\PreviousState.tsx
+  18:23  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useRef\examples\PreviousState.tsx:18:23
+  16 |
+  17 |     // Derive previous values (they will be from the LAST render)
+> 18 |     const prevCount = prevCountRef.current;
+     |                       ^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  19 |     const prevText = prevTextRef.current;
+  20 |
+  21 |     return (                                                                                                                                                                                                                                                                                                                                     react-hooks/refs
+  19:22  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useRef\examples\PreviousState.tsx:19:22
+  17 |     // Derive previous values (they will be from the LAST render)
+  18 |     const prevCount = prevCountRef.current;
+> 19 |     const prevText = prevTextRef.current;
+     |                      ^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  20 |
+  21 |     return (
+  22 |         <div className="bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-xl shadow-2xl text-white">                                                                                                                                                                                                                           react-hooks/refs
+  46:74  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useRef\examples\PreviousState.tsx:46:74
+  44 |                         <div className="bg-black bg-opacity-30 p-4 rounded-lg">
+  45 |                             <p className="text-xl">Current: <span className="font-bold text-yellow-300">{count}</span></p>
+> 46 |                             <p className="text-sm opacity-70">Previous: {prevCount !== undefined ? prevCount : 'None'}</p>
+     |                                                                          ^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  47 |                         </div>
+  48 |                     </div>
+  49 |                                                    react-hooks/refs
+  62:85  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useRef\examples\PreviousState.tsx:62:85
+  60 |                         <div className="bg-black bg-opacity-30 p-4 rounded-lg">
+  61 |                             <p className="text-xl break-all">Current: <span className="font-bold text-yellow-300">"{text}"</span></p>
+> 62 |                             <p className="text-sm opacity-70 break-all">Previous: "{prevText !== undefined ? prevText : ''}"</p>
+     |                                                                                     ^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  63 |                         </div>
+  64 |                     </div>
+  65 |                 </div>  react-hooks/refs
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useTransition\examples\SlowList.tsx
+  6:19  error  Error: Cannot call impure function during render
+
+`performance.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useTransition\examples\SlowList.tsx:6:19
+  4 | const SlowItem = memo(({ text }: { text: string }) => {
+  5 |     // Artificial slowdown
+> 6 |     const start = performance.now();
+    |                   ^^^^^^^^^^^^^^^^^ Cannot call impure function
+  7 |     while (performance.now() - start < 1) {
+  8 |         // Busy wait for 1ms per item
+  9 |     }  react-hooks/purity
+  7:12  error  Error: Cannot call impure function during render
+
+`performance.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+E:\saikumar personal folder\allin-one-react-hook\src\hooks\useTransition\examples\SlowList.tsx:7:12
+   5 |     // Artificial slowdown
+   6 |     const start = performance.now();
+>  7 |     while (performance.now() - start < 1) {
+     |            ^^^^^^^^^^^^^^^^^ Cannot call impure function
+   8 |         // Busy wait for 1ms per item
+   9 |     }
+  10 |                                                          react-hooks/purity
+
+E:\saikumar personal folder\allin-one-react-hook\src\topics\01-core-concepts\04-state\StateExample.tsx
+  13:9  error  Error: This value cannot be modified
+
+Modifying a value returned from 'useState()', which should not be modified directly. Use the setter function to update instead.
+
+E:\saikumar personal folder\allin-one-react-hook\src\topics\01-core-concepts\04-state\StateExample.tsx:13:9
+  11 |     // Γ¥î Bad: Mutation
+  12 |     const handleBadUpdate = () => {
+> 13 |         user.score += 10; // Mutating the object directly
+     |         ^^^^ `user` cannot be modified
+  14 |         setUser(user); // Passing the SAME reference
+  15 |         setLastUpdate('Bad Update (Mutation) - UI might not update!');
+  16 |         console.log('Mutated user:', user);  react-hooks/immutability
+
+E:\saikumar personal folder\allin-one-react-hook\src\topics\02-advanced-patterns\07-error-boundaries\ErrorBoundariesExample.tsx
+  24:48  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\saikumar personal folder\allin-one-react-hook\src\topics\03-performance\02-code-splitting\CodeSplittingExample.tsx
+  5:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 24 problems (24 errors, 0 warnings)
+

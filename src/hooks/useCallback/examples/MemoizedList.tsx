@@ -3,15 +3,18 @@ import React, { useState, useCallback } from 'react';
 // Individual List Item (Memoized)
 const ListItem = React.memo(({ item, onRemove }: { item: string, onRemove: (item: string) => void }) => {
     // Visual feedback for re-render
-    const renderCount = React.useRef(0);
-    renderCount.current++;
+    const [renderCount, setRenderCount] = useState(1);
+
+    React.useEffect(() => {
+        setRenderCount(prev => prev + 1);
+    });
 
     return (
         <li className="flex justify-between items-center bg-white p-3 rounded shadow-sm mb-2 text-gray-800">
             <span>{item}</span>
             <div className="flex items-center gap-3">
                 <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">
-                    Renders: {renderCount.current}
+                    Renders: {renderCount}
                 </span>
                 <button
                     onClick={() => onRemove(item)}

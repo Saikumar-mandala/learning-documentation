@@ -1,7 +1,38 @@
 import React, { useState } from 'react';
 import { interviewData } from '../data/interviewData';
 import { machineCodingData } from '../data/machineCodingData';
+import type { MachineCodingChallenge } from '../data/machineCodingData';
 import { arrayMethodsQuestions } from '../data/arrayMethodsQuestions';
+import type { MethodData } from '../data/arrayMethodsQuestions';
+
+interface PlanItem {
+    title: string;
+    desc: string;
+}
+
+interface PlanCardProps {
+    week: string;
+    title: string;
+    tagline: string;
+    items: PlanItem[];
+    outcome: string;
+    task: string;
+    color: 'blue' | 'indigo' | 'purple' | 'pink';
+}
+
+interface FeatureItemProps {
+    title: string;
+    desc: string;
+}
+
+interface ConceptCardProps {
+    title: string;
+    desc: string;
+    formula: string;
+    hindi: string;
+    questions: MachineCodingChallenge[];
+    interviewData: MethodData | undefined;
+}
 
 const MernPlanPage: React.FC = () => {
     const [bibleView, setBibleView] = useState<'cards' | 'explorer'>('cards');
@@ -292,8 +323,8 @@ const MernPlanPage: React.FC = () => {
 };
 
 // Sub-components
-const PlanCard = ({ week, title, tagline, items, outcome, task, color }: any) => {
-    const colors: any = {
+const PlanCard: React.FC<PlanCardProps> = ({ week, title, tagline, items, outcome, task, color }) => {
+    const colors = {
         blue: 'from-blue-500/20 to-blue-600/5 border-blue-500/30 text-blue-400',
         indigo: 'from-indigo-500/20 to-indigo-600/5 border-indigo-500/30 text-indigo-400',
         purple: 'from-purple-500/20 to-purple-600/5 border-purple-500/30 text-purple-400',
@@ -309,7 +340,7 @@ const PlanCard = ({ week, title, tagline, items, outcome, task, color }: any) =>
             <div>
                 <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
                 <ul className="space-y-4">
-                    {items.map((item: any, idx: number) => (
+                    {items.map((item, idx) => (
                         <li key={idx} className="space-y-1">
                             <span className="text-sm font-semibold block text-slate-100">{item.title}</span>
                             <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
@@ -459,14 +490,14 @@ const MachineCodingLab = () => {
         </div>
     );
 };
-const FeatureItem = ({ title, desc }: any) => (
+const FeatureItem: React.FC<FeatureItemProps> = ({ title, desc }) => (
     <div className="p-3 bg-white/5 rounded-xl border border-white/10 space-y-1">
         <span className="text-indigo-300 font-semibold block">{title}</span>
         <p className="text-xs text-slate-500">{desc}</p>
     </div>
 );
 
-const ConceptCard = ({ title, desc, formula, hindi, questions, interviewData }: any) => {
+const ConceptCard: React.FC<ConceptCardProps> = ({ title, desc, formula, hindi, questions, interviewData }) => {
     const [showQuestions, setShowQuestions] = useState(false);
 
     return (
@@ -507,7 +538,7 @@ const ConceptCard = ({ title, desc, formula, hindi, questions, interviewData }: 
                         <>
                             <p className="text-[10px] text-indigo-400 font-black uppercase tracking-[0.2em]">Machine Coding Rounds</p>
                             <ul className="space-y-2">
-                                {questions.map((q: any) => (
+                                {questions.map((q) => (
                                     <li key={q.id} className="flex items-start gap-3 p-3 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-white/5 transition-colors cursor-pointer group/item">
                                         <div className="h-5 w-5 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 text-[8px] flex-shrink-0 group-hover/item:bg-indigo-500 group-hover/item:text-white transition-all">
                                             <i className="fa-solid fa-code"></i>
@@ -525,11 +556,11 @@ const ConceptCard = ({ title, desc, formula, hindi, questions, interviewData }: 
             ) : (
                 /* Interview Questions Section */
                 <div className="space-y-6 animate-in fade-in duration-500 max-h-[300px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/10">
-                    {interviewData?.sections.map((section: any, idx: number) => (
+                    {interviewData?.sections.map((section, idx) => (
                         <div key={idx} className="space-y-3">
                             <h4 className="text-[10px] text-purple-400 font-black uppercase tracking-widest border-b border-purple-500/20 pb-1">{section.title}</h4>
                             <ul className="space-y-2">
-                                {section.questions.map((q: any) => (
+                                {section.questions.map((q) => (
                                     <li key={q.id} className="flex items-start gap-3 group/q cursor-help">
                                         <span className="text-[9px] text-slate-600 mt-1 font-mono">Q{q.id}.</span>
                                         <p className="text-[11px] text-slate-400 group-hover/q:text-slate-200 transition-colors leading-relaxed">

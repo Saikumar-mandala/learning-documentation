@@ -69,14 +69,14 @@ export default function MarkdownViewer({ filePath, title }: MarkdownViewerProps)
                     remarkPlugins={[remarkGfm]}
                     rehypePlugins={[rehypeHighlight]}
                     components={{
-                        h1: ({ node, ...props }) => <h1 className="text-3xl font-bold mt-8 mb-4 text-gray-900 border-b-2 border-blue-500 pb-2" {...props} />,
-                        h2: ({ node, ...props }) => <h2 className="text-2xl font-bold mt-6 mb-3 text-gray-800" {...props} />,
-                        h3: ({ node, ...props }) => <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-700" {...props} />,
-                        p: ({ node, ...props }) => <p className="my-3 text-gray-700 leading-relaxed" {...props} />,
-                        ul: ({ node, ...props }) => <ul className="my-4 ml-6 list-disc space-y-2" {...props} />,
-                        ol: ({ node, ...props }) => <ol className="my-4 ml-6 list-decimal space-y-2" {...props} />,
-                        li: ({ node, ...props }) => <li className="text-gray-700" {...props} />,
-                        code: ({ node, inline, className, children, ...props }: any) => {
+                        h1: ({ ...props }) => <h1 className="text-3xl font-bold mt-8 mb-4 text-gray-900 border-b-2 border-blue-500 pb-2" {...props} />,
+                        h2: ({ ...props }) => <h2 className="text-2xl font-bold mt-6 mb-3 text-gray-800" {...props} />,
+                        h3: ({ ...props }) => <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-700" {...props} />,
+                        p: ({ ...props }) => <p className="my-3 text-gray-700 leading-relaxed" {...props} />,
+                        ul: ({ ...props }) => <ul className="my-4 ml-6 list-disc space-y-2" {...props} />,
+                        ol: ({ ...props }) => <ol className="my-4 ml-6 list-decimal space-y-2" {...props} />,
+                        li: ({ ...props }) => <li className="text-gray-700" {...props} />,
+                        code: ({ inline, className, children, ...props }: React.ComponentPropsWithoutRef<'code'> & { inline?: boolean }) => {
                             if (inline) {
                                 return (
                                     <code className="bg-gray-100 text-red-600 px-2 py-1 rounded text-sm font-mono" {...props}>
@@ -90,23 +90,23 @@ export default function MarkdownViewer({ filePath, title }: MarkdownViewerProps)
                                 </code>
                             );
                         },
-                        pre: ({ node, ...props }) => <pre className="my-4" {...props} />,
-                        blockquote: ({ node, ...props }) => (
+                        pre: ({ ...props }) => <pre className="my-4" {...props} />,
+                        blockquote: ({ ...props }) => (
                             <blockquote className="border-l-4 border-blue-500 pl-4 my-4 italic text-gray-600 bg-blue-50 py-2" {...props} />
                         ),
-                        table: ({ node, ...props }) => (
+                        table: ({ ...props }) => (
                             <div className="overflow-x-auto my-6">
                                 <table className="min-w-full border border-gray-300" {...props} />
                             </div>
                         ),
-                        thead: ({ node, ...props }) => <thead className="bg-gray-100" {...props} />,
-                        tbody: ({ node, ...props }) => <tbody className="divide-y divide-gray-200" {...props} />,
-                        tr: ({ node, ...props }) => <tr className="hover:bg-gray-50" {...props} />,
-                        th: ({ node, ...props }) => <th className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300" {...props} />,
-                        td: ({ node, ...props }) => <td className="px-4 py-2 text-gray-700 border border-gray-300" {...props} />,
-                        a: ({ node, ...props }) => <a className="text-blue-600 hover:text-blue-800 underline" {...props} />,
-                        strong: ({ node, ...props }) => <strong className="font-bold text-gray-900" {...props} />,
-                        em: ({ node, ...props }) => <em className="italic" {...props} />,
+                        thead: ({ ...props }) => <thead className="bg-gray-100" {...props} />,
+                        tbody: ({ ...props }) => <tbody className="divide-y divide-gray-200" {...props} />,
+                        tr: ({ ...props }) => <tr className="hover:bg-gray-50" {...props} />,
+                        th: ({ ...props }) => <th className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300" {...props} />,
+                        td: ({ ...props }) => <td className="px-4 py-2 text-gray-700 border border-gray-300" {...props} />,
+                        a: ({ ...props }) => <a className="text-blue-600 hover:text-blue-800 underline" {...props} />,
+                        strong: ({ ...props }) => <strong className="font-bold text-gray-900" {...props} />,
+                        em: ({ ...props }) => <em className="italic" {...props} />,
                     }}
                 >
                     {content}

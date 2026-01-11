@@ -5,6 +5,10 @@ const DependencyDemo = () => {
     const [text, setText] = useState('');
     const [effectLog, setEffectLog] = useState<string[]>([]);
 
+    const addLog = (message: string) => {
+        setEffectLog(prev => [message, ...prev].slice(0, 5));
+    };
+
     // Effect 1: No Dependency Array
     useEffect(() => {
         addLog('⚡ Effect 1 ran (No Deps - Every Render)');
@@ -28,10 +32,6 @@ const DependencyDemo = () => {
             addLog(`📝 Effect 4 ran (Text changed to "${text}")`);
         }
     }, [text]);
-
-    const addLog = (message: string) => {
-        setEffectLog(prev => [message, ...prev].slice(0, 5));
-    };
 
     return (
         <div className="bg-gradient-to-br from-gray-700 to-gray-900 p-6 rounded-xl shadow-2xl">
